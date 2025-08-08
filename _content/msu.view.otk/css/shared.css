@@ -1,0 +1,29 @@
+﻿
+/* нумерация четверостиший Катренов */
+.hint--left:after, .hint--left:before {
+    right: 99%;
+    bottom: 112%;
+}
+@media screen and (max-width: 1200px) {
+    .hint--left:after, .hint--left:before {
+        right: 98%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hint--left:after, .hint--left:before {
+        right: 97%;
+    }
+}
+[class*=hint--]:after {
+    padding: 4px 2px;
+    font-size: 1.5rem;
+}
+.poem::before {
+    content: attr(aria-label);
+    position: absolute;
+    /*left: -10px;*/
+}
+
+[class*=hint--]:hover:before, [class*=hint--]:hover:after {
+    visibility: var(--visibility, visible);
+}
