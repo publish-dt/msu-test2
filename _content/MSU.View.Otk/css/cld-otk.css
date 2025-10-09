@@ -1,0 +1,32 @@
+.cld-main {
+    /*DT*/
+    width: 230px; /*DT*/
+    background-color: #136;
+    border-width: 1px 2px;
+    border-style: solid;
+    border-color: #8be #9cf #9cf #8be;
+    font: 12px / 13px Verdana, sans-serif;
+}
+    .cld-main a {
+        color: #e8e8e8; /*DT*/
+    }
+
+
+
+/*DT*/
+.cld-number.dict {
+    background: none;
+    border: 1px solid #fff;
+    color: #ddd;
+}
+    .cld-number.dict:hover {
+        cursor: pointer;
+    }
+
+.cld-number.poemOutDict {
+    background: #406092;
+}
+
+.cld-number.poem {
+    background: #406092;
+}
