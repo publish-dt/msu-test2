@@ -1,0 +1,72 @@
+
+/* нумерация четверостиший Катренов */
+/*.hint--left:after, .hint--left:before {
+    right: 99%;
+    bottom: 112%;
+}
+@media screen and (max-width: 1200px) {
+    .hint--left:after, .hint--left:before {
+        right: 98%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hint--left:after, .hint--left:before {
+        right: 97%;
+    }
+}
+[class*=hint--]:after {
+    padding: 4px 2px;
+    font-size: 1.5rem;
+}
+
+[class*=hint--]:hover:before, [class*=hint--]:hover:after {
+    visibility: var(--visibility, visible);
+}*/
+
+
+.poem:hover:before {
+    visibility: var(--visibility, visible);
+}
+
+/* IE11 */
+*::-ms-backdrop, .poem:hover:before {
+    visibility: visible;
+}
+
+.poem::before {
+    content: attr(aria-label);
+    position: absolute;
+}
+
+
+
+/* переопределяем классы для спиннера */
+.my-indicator {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+/* здесь полностью повторение, что и в .htmx-request.my-indicator */
+/*.htmx-request .my-indicator {
+    opacity: 1;
+    transition-delay: 3s; 
+    background: url(../../../MSU.View.Otk/wwwroot/img/spinner.gif) no-repeat;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    display: block;
+}*/
+
+.htmx-request.my-indicator {
+    opacity: 1;
+    transition-delay: 3s; /* задержка, чтобы спиннер не мелькал при быстрых ответах запроса, а отображался только когда запрос слишком долго выполняется */
+    background: url(../../../_content/MSU.View.Otk/img/spinner.gif) no-repeat;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    display: block;
+}

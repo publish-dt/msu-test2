@@ -1,0 +1,1636 @@
+/*Стили для всего сайта*/
+/*импортированный шрифт*/
+
+@font-face {
+	font-family: MyriadProCondensed;
+	src: local("Myriad Pro Condensed"), /* чтобы сработало надо в Windows установить MyriadPro-Cond.ttf */
+	local("MyriadPro-Cond"), /* чтобы сработало надо в Windows установить MyriadPro-Cond.ttf */
+	/* если данный стиль загружается из CDN, то и шрифты оттуда же */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.woff2') format('woff2'), /* Супер новые браузеры */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.woff') format('woff'), /* Новые браузеры */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.otf') format('opentype'), /**/
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.eot'), /* IE9 Compat Modes */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../../../_content/MSU.View.Otk/fonts/MyriadPro-Cond.svg#MyriadPro-Cond') format('svg'); /* Legacy iOS */
+}
+
+body {
+	min-height: 100%;
+	/*  margin: 0px 1%;*/
+	background: #000 url("../../../_content/MSU.View.Otk/img/stars.gif") repeat fixed 0% 0%; /* var(--body-background) */
+	color: #e8e8e8 /*#FFFFFF*/; /*цвет текста на сайте*/
+	font-family: 'MyriadProCondensed', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* Content */
+.content {
+  min-height: 250px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* H1 - H6 Шрифты */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'MyriadProCondensed', sans-serif;
+}
+h1{
+	line-height: 30px;
+	font-weight: 700 !important;
+	font-size: 24px !important;
+}
+h2{
+	line-height: 26px;
+	font-weight: 700 !important;
+	font-size: 18px !important;
+}
+
+h3{
+    line-height: 0.9;
+	font-size: 20px !important;
+    color: #CEF;
+    margin: 18pt 0px 5pt;
+}
+h4 {
+    font-size: 21px;
+    line-height: 0.9;
+    color: #fff;
+    font-weight: 400;
+}
+/* ССЫЛКИ основные на Послания и разделы*/
+a {
+	color: #FFFFFF; /*белый*/
+}
+a:hover,
+a:active,
+a:focus {
+	color: #FFF;
+	text-decoration: underline; /*становится подчёркнутой*/
+	outline: none;
+}
+
+/*Посещённая ссылка*/
+a:visited{
+	color: #CEF/*!important*/;/*бледно-голубой*/	
+}
+/* ССЫЛКИ дополнительные*/
+a.blue-link{
+	color: #9CF!important;/*голубой*/	
+}
+a.blue-link:hover,
+a.blue-link:active,
+a.blue-link:focus{
+	color: #FFFFFF !important;  /*белый*/
+}
+
+/*Ссылки внизу Посланий "В начало страницы" и "На следующую страницу"*/
+button.blue-link-pagination,
+a.blue-link-pagination{
+	color: #9CF !important;/*голубой*/
+	text-decoration: none; /*убираем подчёркивание*/
+	display: inline-block;	/*чтобы при уменьшении экрана правильно переносились на новую строку*/
+}
+button.blue-link-pagination:visited,
+a.blue-link-pagination:visited{
+	color: #CEF!important;/*бледно-голубой*/
+}
+button.blue-link-pagination:hover,
+button.blue-link-pagination:active,
+button.blue-link-pagination:focus,
+a.blue-link-pagination:hover,
+a.blue-link-pagination:active,
+a.blue-link-pagination:focus{
+	color: #FFFFFF !important;  /*белый*/
+}
+/*Ссылки Версия для печати и постоянная ссылка*/
+a.blue-link-version-print,
+a.blue-link-post{
+	color: #9CF!important;/*голубой*/
+	text-decoration: none; /*убираем подчёркивание*/	
+}
+a.blue-link-version-print:visited,
+a.blue-link-post:visited{
+	color: #CEF!important;/*бледно-голубой*/
+	text-decoration: none; /*убираем подчёркивание*/		
+}
+a.blue-link-version-print:hover,
+a.blue-link-version-print:active,
+a.blue-link-version-print:focus,
+a.blue-link-post:hover,
+a.blue-link-post:active,
+a.blue-link-post:focus{
+	text-decoration: underline; /*становится подчёркнутой*/	
+}
+
+/*Сылки на странице Медиа*/
+a.plink{
+	color: #CEF;
+	text-decoration: none;
+}
+a.plink:hover,
+a.plink:active{
+	color: #FFF;
+	text-decoration: underline; /*становится подчёркнутой*/
+	outline: none;
+}
+/*Чтобы картинки с фиксированной шириной не ломали резиновые столбцы*/
+img {
+   max-width: 100%;
+}
+
+td{
+    vertical-align: top;
+}
+/*Очистка блоков*/
+.clear{
+  clear: both;
+}
+.txt-blue{
+	color: #9CF !important;	/*голубой*/		
+}
+.txt-gray{
+	color: #EEEEEE !important; /*бледно-серый*/
+}
+.page{
+	max-width: 1680px;
+	margin: auto;
+}
+
+/*-----------------------------------------------------*/
+/*					ОКНО ВХОДА НА САЙТ					*/
+/*-----------------------------------------------------*/
+
+/*Заголовок БЛАГАЯ ВЕСТЬ*/
+.title-site{
+	text-align: center;
+	font-weight: 400;
+	font-size: 80px;
+	color: #CCEEFF;/*#99CCFF;	*/
+	line-height: 70px;
+}
+/*Класс loginModal для всего окна входа*/
+.loginModal .modal-content{
+	box-shadow: none!important; /*убираем тень от блока со входом*/
+	background: none!important; /*убираем фон от блока со входом*/
+}
+/*под заголовком без линии*/
+.loginModal .modal-header {
+	border: none;
+}
+
+.loginModal .modal-body{
+	padding: 0px!important;
+}
+
+/*Поля ввода*/
+.loginModal .form-control{
+	color: #F0F0F0; /*текст в поле ввода*/
+	background-color: rgba(61, 61, 61, 0.5)!important; /*#3D3D3D;*/
+	background-image: none;
+	border: 1px solid #3D3D3D!important;
+	box-shadow: none!important;
+	font-size: 22px!important;
+}
+
+/*Обводка поля ввода при фокусе на поле*/
+.loginModal .form-control:focus{
+	border: 1px solid #6699CC!important;
+}
+/*перенастраиваем бутрстраповские поля ввода без закруглений*/
+.loginModal .input-lg{
+	border-radius: 0px!important;
+}	
+/*Кнопка "Вход"*/
+.loginModal .btn-lg{
+	font-size: 26px!important;
+	line-height: 24px;
+	border-radius: 0px!important;
+}
+
+.loginModal .btn-primary{
+	color: #fff;
+	background-color: #4A4A4A!important;
+	border-top: 1px solid #ddd;
+	border-left: 2px solid #ddd;
+	border-bottom: 2px solid #999;
+	border-right: 2px solid #999;	
+}
+/*Отступ "Забыли пароль"*/
+.remember-pas{
+	padding-top: 10px;
+}
+/*-----------------------------------------------------*/
+/*					ШАПКА САЙТА						*/
+/*-----------------------------------------------------*/
+/*контейнер для картинки шапки сайта*/
+.sm-container-header{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+/*Блок с картинкой*/
+.header {
+	position: relative;
+	height: auto; /*резиновая высота*/
+	width: auto;
+	background: transparent url("../../../_content/MSU.View.Otk/img/header.jpg") no-repeat scroll left top; /*картинка-фон слева   var(--header-background) */
+	border-left: 3px solid #69C;
+	border-bottom: 2px solid #69C;
+}
+/*Название сайта на картинке "Благая весть"*/
+.blagayavest{
+	position: absolute; 
+	top: 20px; 
+	left: 30px;
+	font-size: 53px;
+	font-weight: 400;
+	text-shadow: #CCEEFF 1px 1px 0, #3C6DB4 0 0 8px; /*rgb (60, 109, 180)*/	
+}
+
+/*Фраза "Эта Книга продиктована Высшим Космическим Разумом избранному Им Человеку в России"*/
+.book{
+	position: absolute; 
+	top: 100px; 
+	left: 30px;
+	font-size: 19px;
+	font-weight: 400;
+	text-shadow: #3C6DB4 0 0 8px; /*rgb (60, 109, 180)*/
+}
+/*Ширина экрана меньше 768px выводим текст без абсолютного позиционирования более компактно*/
+@media screen and (max-width: 767px){
+	.blagayavest{
+		position: static;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 42px;		
+		line-height: 40px;	
+	}
+	.book{
+		position: static;
+		padding-left: 15px;
+		padding-right: 15px;		
+		padding-bottom: 5px;
+		line-height: 22px;
+	}
+	/*убираем нижний отступ меню*/
+	.navbar{
+		margin-bottom: 0px;
+	}
+}
+
+/*Ширина экрана от 768px и выше, от планшета до компьютера*/
+@media only screen and (min-width: 768px){
+	.header{
+		min-height: 257px;
+		background-size: 800px 100%;
+	}
+}
+/*Ширина экрана от 768px и выше, от планшета до компьютера*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){ 
+  .book{
+		display: block;
+		max-width: 330px;
+  }
+}
+
+/*Отступ блока с цитатой*/
+.baner-quote{
+	padding-top: 15px;
+	padding-left: 50px;
+	font-size: 16px;
+	padding-right: 0px !important;
+}
+/*ipPad - Ширина экрана от 768px и до компьютера*/
+@media only screen and (min-width: 768px) and (max-width: 991px){ 
+  .baner-quote{
+	 padding-left: 0px;
+  }
+}
+/*Цитата из Послания в шапке сайта*/
+.poslan-quote{
+	color: #CEF;/*бледно-голубой*/
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 400;	
+	line-height: 1;
+	margin: 0px 0px 0px !important;
+}	
+/*Ссылка на Послание в шапке сайта*/
+.poslan-link {
+	float: none;
+	text-align: center !important;
+	padding: 5px 0px 0px;
+	font-size: 16px;
+	white-space: nowrap; /*Пробелы не учитываются, переносы строк в коде HTML игнорируются, весь текст отображается одной строкой; вместе с тем, добавление тега <br> переносит текст на новую строку.*/
+}
+.poslan-link a{
+	color: #FFFFFF;
+}
+
+/*-----------------------------------------------------*/
+/*ГЛАВНОЕ МЕНЮ*/
+/*-----------------------------------------------------*/
+/*Выравниваем пункты главного меню по вертикали*/
+.nav-justified > li{
+	vertical-align: middle;
+}
+.top-menu {
+	text-decoration: none;
+	font-size: 20px;
+	padding: 0px 2px;
+	background: none !important;
+	border-bottom: 2px solid #69C;
+	height: auto;
+	text-align: center;
+	position: relative;
+}
+
+.top-menu-ul li a{
+	text-transform: uppercase; /*Заглавные*/
+	color: #FFFFFF !important;	 /*цвет текста на сайте*/
+	padding: 10px 5px;
+}
+/*Наведённый пункт меню*/
+.top-menu-ul li a:hover,
+.top-menu-ul li a:focus,
+.top-menu-ul li a:active{
+	color: #9CF !important; /*голубой*/	
+	background: none !important; /*без фона*/
+	text-decoration: none;
+}
+/*Активный пункт меню*/
+.top-menu-ul li.selected a {
+	background: none !important;
+	color: #9CF !important; /*голубой ссылка*/
+}
+/*---------------------Пункты меню без ссылок-----------------------*/
+.top-menu-ul li{
+	color: #FFFFFF !important;	 /*цвет текста на сайте*/
+}
+/*Наведённый пункт меню*/
+.top-menu-ul li:hover,
+.top-menu-ul li:focus,
+.top-menu-ul li:active{
+	color: #9CF !important; /*голубой*/	
+	background: none !important; /*без фона*/
+	text-decoration: none;
+}
+/*Активный пункт меню*/
+	.top-menu-ul li.selected {
+		background: none !important;
+		color: #9CF !important; /*голубой ссылка*/
+	}
+.top-menu-pad{
+	padding: 10px 5px;
+}
+/*------------------------------------------------------------------*/
+/*фон полоски меню для мобильных и планшетов*/	
+.small-menu{
+	background: none !important;	/*без заливки*/
+
+}
+/*Стиль кнопки меню для мобильных и планшетов*/
+.top-menu  .navbar-toggle {
+    border:  none !important; /*1px solid #FFFFFF !important;*/
+	background: none !important;	
+}
+
+.top-menu  .navbar-toggle:hover {
+    border:  none !important;
+	background: none !important;
+}
+
+/*убираем для кнопки отступ справа*/
+.navbar-toggle {
+	margin-right: 0px;
+}
+/*-----------------------------------------------------*/
+/*ЛЕВАЯ ЧАСТЬ САЙТА -календарь, регистрация, Посыл*/
+/*-----------------------------------------------------*/
+/*ОБЩИЙ СТИЛЬ СПИСКОВ в левой колонке*/
+.style-select{
+	color: #9CF !important;	/*голубой*/	
+	background-color: #136 !important; /*синий цвет фона*/
+	font-size: 16px !important;	
+}
+
+/*Для широкоформатных мониторов с шириной больше, чем 1200 пикселей делаем левую колонку уже*/
+@media only screen and (min-width: 1200px) {
+	.large-monitor-left{
+		max-width: 260px;/*290px;*/
+		/*padding-right: 50px;*/
+	}
+	
+}
+
+/*ПОИСК*/
+/*Поле ввода+кнопка*/
+.search-group{
+	width: 100%; 
+	display: table;
+}
+.input-search-group{
+	display: table-cell; 
+	vertical-align: top;
+}
+.list-search-group{
+	display: table-cell;
+	width:40px; 
+	vertical-align: top;
+}
+/*Поле ввода*/
+.srch {
+	/*max-width: 215px;*/
+	width:100%;
+	padding: 0px 0px 0px 3px;
+	height: 23px;
+	background-color: #136 !important; /*синий цвет фона*/
+	opacity: 0.9;
+	border-width: 1px 2px;
+	border-style: solid;
+	border-color: #789 #9CF #9CF #789;
+	font-size: 18px;
+	color: #E8E8E8;
+}
+/*кнопка*/
+.btn-search{
+    width: 40px;
+    height: 23px;
+    background-color: #369;
+    color: #E2E2E2;
+    border-width: 1px 2px 2px;
+    border-style: solid;
+    border-color: #9CF #789 #789 #9CF;
+}
+
+.where-search-block{
+	float:right; 
+	margin-top: 5px;
+}
+/*Где искать*/
+.where-search{
+	width: 116px;
+}
+.find{
+	float:right;
+	padding: 0 10px;
+	line-height: 35px !important;
+}
+/*-----------------------------------------*/
+/*------СТИЛИ ДЛЯ КАЛЕНДАРЯ СЛЕВА----------*/
+/*-----------------------------------------*/
+/*обводка*/
+.kalendar {
+	background-color: #136 !important; /*синий цвет фона*/
+	border-width: 1px 2px;
+	border-style: solid;
+	border-color: #8BE #9CF #9CF #8BE;
+	max-width: 230px;
+}
+.kalendar .table-condensed {
+    font: 12px/13px Verdana,sans-serif; /*Шрифт в календаре*/
+    /*font-family: 'Verdana' !important;
+    font-size: 12px !important;*/
+	/*border-spacing: 0px;
+    border-collapse: collapse;*/
+	border-spacing: 1px;
+    border-collapse: separate;	
+}
+/*вид сетки календаря*/
+.datepicker table tr td, 
+.datepicker table tr th {
+    text-align: right;
+    width: 30px !important;  /*ширина ячеек*/
+    height: 20px !important;  /*высота ячеек*/
+    border-radius: none !important;
+    border: medium none;
+}
+/*Шапка календаря с днями недели*/
+.kalendar .table-condensed > thead > tr > th{
+	color: #DDD !important;
+	padding: 0px!important; /*внутренние отступы в ячейке*/
+}
+/*внутренние отступы в ячейке*/
+.kalendar .table-condensed > tbody > tr > td{
+	padding: 0px 3px 0px 0px!important;
+	margin-bottom:1px;
+	margin-top:1px;
+}
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled.disabled{
+	background: none !important;
+	color: #DDD !important;
+	border: none !important;	
+}
+/*Делаем, чтоба текущий день не подсвечивался в календаре*/
+.datepicker table tr td.today.disabled:hover, 
+.datepicker table tr td.today.disabled:hover:hover, 
+.datepicker table tr td.today.disabled.disabled:hover, 
+.datepicker table tr td.today.disabled.disabled:hover:hover{
+	background: none !important;
+	color: #DDD !important;	
+	border: none !important;
+}
+/*Первые дни месяца в календаре - делаем, чтобы не выделялись*/
+.datepicker table tr td.active.active{
+	color: #DDD !important;
+	background: none !important;
+	border: none !important;
+}
+
+/*-------------День в календаре, совпадающий с Посланием--------*/
+.datepicker table tr td.myactive{
+	color: #DDD !important;
+	background: none !important;
+	border: 1px solid #FFFFFF !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+.datepicker table tr td.myactive:hover{
+	color: #9CF !important; /*голубой*/
+	font-weight: 700px !important;	
+	background: none !important;
+	border: 1px solid #FFFFFF !important;
+}
+/*-------------------------------ДНИ - ПОСЛАНИЯ В КАЛЕНДАРЕ-----------------------------*/
+.datepicker table tr td.activeday{
+	color: #DDD !important;
+	background: none !important;
+	border: 1px solid #FFFFFF !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+/*При наведении дата становится голубой*/
+.datepicker table tr td.activeday a:hover{
+	color: #9CF !important;
+	font-weight: 700px !important;	
+	background: none !important;
+	/*border: 1px solid #FFFFFF !important;*/
+    text-decoration: none;
+}
+/*событие при нажатии*/
+.datepicker table tr td.activeday.active{
+	color: #DDD !important;
+	background: none !important;
+	border: 1px solid #FFFFFF !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+/*-------------------------------ДНИ - КАТРЕНЫ В КАЛЕНДАРЕ-----------------------------*/
+.datepicker table tr td.katren{
+	color: #DDD !important;
+	background: #406092 !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+/*При наведении дата становится голубой*/
+.datepicker table tr td.katren a:hover{
+	color: #9CF !important;
+	font-weight: 700px !important;	
+	background: none !important;
+    text-decoration: none;
+}
+.datepicker table tr td.katren.active{
+	color: #DDD !important;
+	background: #406092 !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+.datepicker table tr td.dict-poem{
+	color: #DDD !important;
+	background: #406092 !important;
+	border: 1px solid #FFFFFF !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+/*При наведении дата становится голубой*/
+.datepicker table tr td.dict-poem a:hover{
+	color: #9CF !important;
+	font-weight: 700px !important;	
+	background: none !important;
+    text-decoration: none;
+}
+.datepicker table tr td.dict-poem.active{
+	color: #DDD !important;
+	background: #406092 !important;
+	border: 1px solid #FFFFFF !important;
+	border-radius: 0px;
+	font-weight: bold;
+}
+/*-------------------------------ОСОБЫЕ ДНИ В КАЛЕНДАРЕ - ВЕЧЕ или ОБРАЩЕНИЯ----------------*/
+.datepicker table tr td.specdate{
+	color: #DDD !important;
+	background-color: rgba(102, 153, 204, 0.7)!important;
+	border: 1px solid  #cef!important;
+	border-radius: 0px;
+	font-weight: bold;	
+}
+/*событие при нажатии*/
+.datepicker table tr td.specdate.active{
+	color: #DDD !important;
+	background-color: rgba(102, 153, 204, 0.7)!important;
+	border: 1px solid  #cef!important;
+	border-radius: 0px;
+	font-weight: bold;	
+}
+/*При наведении дата становится голубой*/
+.datepicker table tr td.specdate:hover{
+	color: #9CF !important;
+}
+/*-------------------------------Прошедшие дни Посылов В КАЛЕНДАРЕ----------------*/
+.datepicker table tr td.daymsg, td.daymsgblink{
+	color: #c8f0ff;
+	font-weight: bold;
+}
+/*-------------------------------Дни другого месяца В КАЛЕНДАРЕ----------------*/
+.datepicker table tr td.hideday,
+.datepicker table tr td.hideday:hover{
+    color: #444;
+}
+
+/*-------------------- Дни другого месяца В КАЛЕНДАРЕ  СКРЫВАЕМ----------------*/
+.datepicker table tr td.new{
+	display: none;
+}
+.select-poslan{
+	float:right;
+	margin-top:5px;
+}
+.select-month{
+	margin-right:5px;	
+}
+/*Перейти к месяцу и году Послания*/
+.goto{
+	text-align: right; 
+	padding-right:5px;
+}
+/*------------------------------------------------------------*/
+/*                Личный кабинет                              */
+/*------------------------------------------------------------*/
+.login{
+    width: 73px; 
+	float: left;
+}
+
+.aform {
+    width: 100%;
+	line-height: 20px !important;
+}
+/*Текст*/
+.txt1{
+    width: 170px; 
+	float: left;
+}
+/*Данные*/
+.txt2{
+    width: auto; 
+	float: right;
+}
+/*Зарегистрироваться*/
+.registration-link{
+	width: 100%; 
+	line-height: 30px !important;
+	text-align: right; 
+	/*text-decoration: underline; подчёркнутая ссылка*/
+}
+
+/*------------------------------------------------------------*/
+/*                     Переводчик                             */
+/*------------------------------------------------------------*/
+.trans{
+	float: left; 
+	width: 80px;
+}
+.select-trans{
+	float: left;
+}
+/*Переводчик - выпадающий список*/
+.srvr{
+	width: 130px;
+}
+/*Высота строчек в блоках левой панели*/
+.lh-block{
+	line-height: 20px !important;	
+}
+/*-----------------------------------------------------*/
+/*                ЦЕНТРАЛЬНАЯ ЧАСТЬ САЙТА              */
+/*-----------------------------------------------------*/
+/*Отступ сверху до заголовка центральной части страницы*/
+.page-main {
+	font-size: 20px;
+	line-height: 22px;
+    margin-bottom: 60px;
+	text-align: justify; /*Текст по ширине страницы*/
+}
+
+/*Для широкоформатных мониторов с шириной больше, чем 1200 пикселей делаем центральную колонку по всей ширине*/
+@media only screen and (min-width: 1200px) {
+	.large-monitor-center{
+		width: calc(100% - 260px);
+		width: -moz-calc(100% - 260px);
+		width: -webkit-calc(100% - 260px);
+	}
+	/*футер для больших экранов пропускаем 260px*/
+	.col-lg-offset-260{
+		margin-left: 260px;
+	}		
+}
+/*Заголовок страницы, ответы к Посланию*/
+.page-title,
+.next {
+    margin-bottom: 10px;
+	text-align: center;
+	border-bottom: 4px double #F0F0F0;	
+	line-height: 2;	
+}
+/*Дата Послания*/
+.date{
+	color: #CEF !important; /*бледно-голубой*/	
+	margin-right: 5pt;
+}
+/*Абзацный отступ у первой строки*/
+.page-main p{
+	text-indent: 25px; /* Отступ первой строки в пикселах */
+}
+/*Подпись под Посланием, стиль абзацев в Новостях*/
+p.c0 {
+	text-indent: 0px; /* Отступ первой строки в пикселах */
+	text-align: justify; /*text-align: left;*/
+    margin: 0 0 4pt 0;
+	font-size: 20px;
+	/*word-break: break-all;*/
+}
+/*Разделы со ссылками на главной странице*/	
+.razdel{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.razdel.row{
+	margin-top: 0px;
+}
+	.razdel h2 {
+		color: #9CF !important;
+		border-left: 1px solid #9CF;
+		border-bottom: 1px solid #9CF; /*голубой ссылка*/
+		line-height: 1.8;
+		padding-left: 10px;
+		font-weight: 400 !important;
+		font-size: 20px !important;
+	}
+	.razdel h2 a {
+		color: #9CF !important;
+	}
+.razdel ul {
+	margin-bottom: 5px !important;
+	padding-left: 10px !important;	
+}
+/*список ссылок c маркеров*/
+/*Список в публикации в газете "6-я раса"*/
+.razdel ul li {
+	list-style-type: disc;
+	/*list-style-type: none; /* Убираем маркеры */
+    margin-left: 12px;
+}
+.razdel ul li >a{
+	color: #FFFFFF !important;
+}
+/*список ссылок без маркеров*/
+.razdel li a:hover{
+	color: #9CF !important;
+}
+
+.cont{
+	padding-left: 10px !important;	/*отступ слева для ссылок*/
+}
+/*-----------------------------------------------------------*/
+/*НИЖНЯЯ ЧАСТЬ ЦЕНТРАЛЬНОЙ СТРАНИЦЫ*/
+/*-----------------------------------------------------------*/
+/*Переход в начало страницы и между страницами*/
+.page-top-next{
+	width: 100%; 
+	padding-top: 40px; 
+	padding-bottom: 40px;
+	text-align: center;
+}
+/*для слов "В начало страницы" и "На следующую"*/
+.page-top-next a{
+	color: #9CF;
+	text-decoration: none;
+	font-size: 20px;
+}
+.page-top-next a:hover{
+	color: #FFF;
+}
+.page-top-next a:active{
+	color: #CEF;
+}
+
+/*Версия для печати*/
+.version-print a,
+.post-link a{
+	font-size: 20px;
+}
+.version-print a{
+	font-size: 20px;
+}
+/*при наведении подчеркнутая*/
+.version-print a:hover,
+.post-link a:hover{
+	text-decoration: underline;
+}
+/*Версия для печати*/
+/*ipPad - Ширина экрана от 768px и выше, от планшета до компьютера*/
+@media only screen and (min-width: 768px){ 
+  .version-print{
+		display: block;
+		text-align: left;
+  }
+  .post-link{
+		display: block;
+		text-align: right;
+  }
+}
+/*Телефоны - Ширина экрана меньше 768px*/
+@media only screen and (max-width: 768px){ 
+  .version-print{
+		display: block;
+		text-align: left;
+  }
+	.post-link {
+		display: block;
+		text-align: right;
+	}  
+}
+
+/*-----------------------------------------------------*/
+/*ФУТЕР*/
+/*-----------------------------------------------------*/
+
+.blok-footer {
+    padding: 30px 0px;
+}
+.copyright {
+	color: #EEE !important;
+	font-size: 12px;
+	font-family: Arial;
+    text-align: center;	
+}
+.copyright a{
+	color: #EEE !important;		
+}
+/*выравниваем счётчики по центру*/
+.blok-metrik{
+	text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+/*ДРУГИЕ РАЗДЕЛЫ САЙТА*/
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+/*Список для Толкований*/
+.col-tolk {
+	padding-left: 10px;
+	text-align: left;
+}
+/*Список годов Посланий*/
+.years {
+    width: 100%;
+    margin-top: 15px;
+   /* padding: 12pt 0px 0px;*/
+    line-height: 3;
+    text-align: center;
+	border-top: 1px solid #9CF;
+}
+.years  a{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* РЕЗУЛЬТАТЫ ПОИСКА */
+DIV.hr {
+    width: 100%;
+    height: 1px;
+    margin: 7pt 0px 12pt;
+    border-top: 1px dashed #AAA;
+}
+#res P {
+    line-height: 1;
+    color: #FFFFFF;/*#E8E8E8;*/
+    text-indent: 0px;
+    margin: 4pt 2pt 2pt;
+}
+#res P.poem {
+    margin-bottom: 10pt;
+}
+#res P STRONG{
+    font-weight: 400 !important; 
+    color: #CEF;
+}
+#res P b{
+    font-weight: 400 !important; 
+}
+
+#res A:link {
+    color: #9CF;
+    text-decoration: none;
+}
+
+/*Ширина экрана от 768px и выше, от планшета до компьютера*/
+@media only screen and (max-width: 768px){
+	/*заголовок Катрена в поиске по левому краю для мобильных устройств*/
+	#res .box-news{
+		text-align: left;
+	}
+}
+
+#pages A {
+    margin: 0px 2pt;
+}
+#pages {
+    /*font-family: MyriadProCondensed,Arial,Helvetica,sans-serif;*/
+}
+#pages SPAN {
+    padding: 1pt 3pt 2pt;
+    border: 1px solid #F0F0F0;
+    margin: 0px 0px 0px 3pt;
+}
+/*Адрес для писем*/
+#addr {
+    width: 50%;
+    border: 1px solid #D0D0D0;
+    margin: 8pt 0px;
+    padding: 6pt 10pt 3pt;
+}
+
+/*---------------------------------------------*/
+/*--------------МЕДИА--------------------------*/
+/*---------------------------------------------*/
+/*Стиль "Читать полностью"*/
+p.c6 {
+    margin: 6pt 0px 0px;
+    text-indent: 0px; /*убираем отступ у первой строки*/
+}
+/* Таблицы */
+.page-main TABLE.ext {
+    width: 100%;
+    height: 34px;
+    margin: 0px 0px 6pt;
+}
+
+.page-main TABLE.ext TABLE {
+    width: 100%;
+}
+.page-main TABLE.int TR {
+    background-color: #222;
+}
+.page-main TABLE.int TD {
+    padding: 3px 4px 4px;
+    vertical-align: middle;
+    font-size: 120%;
+    line-height: 0.9;
+    color: #DDD;
+    border-color: #DDD;
+    border-width: 1px;
+    border-style: solid;
+}
+.page-main TD.c0 {
+    background-color: #666;
+}
+.page-main TD.c2 {
+    width: 100%;
+    height: 8px;
+    background-color: #808080;
+}
+#download {
+    width: 20%;
+    padding: 5pt 0px 0px;
+}
+
+#hear {
+    padding: 5pt 0px 0px;
+    text-align: right;
+}
+
+#dload {
+    text-align: center;
+    padding: 6pt 0px 0px;
+    font-size: 13pt;
+	line-height: 0.9;
+    color: #CEF;
+}
+
+/*-------------------------------------------*/
+/* НОВОСТИ И ОБЪЯВЛЕНИЯ */
+/*-------------------------------------------*/
+p.noind {
+    text-indent: 0px;
+    text-align: left;
+}
+/*-------------------------------------------*/
+/*НОВЫЕ ТЕКСТЫ*/
+/*-------------------------------------------*/
+table.dict {
+}
+table.dict th{
+    width: 2pt;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    vertical-align: top;
+}
+table.dict td {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+
+/*---------------------------------------------*/
+/* Форматирование модального диалога сообщений */
+/*---------------------------------------------*/
+.modal-body, .errmsgstr {
+    color: red;
+}
+
+/*-------------------------------------------*/
+/*     АНКЕТА УЧАСТНИКА ОКТАЭДРА	 		 */
+/*-------------------------------------------*/
+.anketa{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+/*Заголовок анкеты*/ 
+.anketa h2{
+	color: #FFFFFF!important;	
+	line-height: 1.8;
+	font-weight: 400 !important;
+	font-size: 20px !important;
+	text-align: center;
+}
+.anketa h2.border{
+	border-bottom: 1px solid #DDD;
+}
+/*фон и рамка вокруг блока с анкетой*/
+.anketa-bg{
+	font-size: 19px; /*размер шрифта подписей элементов*/
+	padding: 10px;
+	background-color: #222;
+	border: 1px solid #DDD;
+	  box-shadow:
+  1px 0px rgb(110,110,110), 1px 1px rgb(156,156,156),
+  2px 1px rgb(109,109,109), 2px 2px rgb(155,155,155),
+  3px 2px rgb(108,108,108), 3px 3px rgb(154,154,154),
+  4px 3px rgb(107,107,107), 4px 4px rgb(153,153,153),
+  5px 4px rgb(106,106,106), 5px 5px rgb(152,152,152),
+  6px 5px rgb(105,105,105), 6px 6px rgb(151,151,151),
+  7px 6px rgb(104,104,104), 7px 7px rgb(150,150,150),
+  8px 7px rgb(103,103,103), 8px 8px rgb(149,149,149);
+
+}
+.anketa-row-height{
+	line-height: 34px!important;
+}
+/*поля ввода данных в анкете*/
+.anketa-bg .inp {
+    height: 30px;
+	font-size: 19px; /*размер шрифта в полях ввода*/
+	line-height: 27px;	
+    color: #f0f0f0;
+    padding-left: 2px; /*отступ внутри поля ввода до текста слева*/
+	margin-top: 2px; /*отступ сверху до поля ввода*/
+	margin-bottom: 2px; 
+    background-color: #3d3d3d;
+    border-top: 1px solid #808080;
+    border-left: 2px solid #808080;
+    border-bottom: 2px solid #eee;
+    border-right: 2px solid #ccc;
+
+}
+.inp-width{
+	width: 100%;
+	float: left;
+}
+
+/*кнопка Cохранить данные*/
+.btn-save-data{
+	width: 196px;
+	height: 30px;
+	font-size: 19px;
+	line-height: 27px;
+	color: #fff;
+	background-color: #4a4a4a;
+	margin-top: 30px;
+	margin-bottom: 10px;	
+	border-top: 1px solid #ddd;
+	border-left: 2px solid #ddd;
+	border-bottom: 2px solid #999;
+	border-right: 2px solid #999;
+}
+/*Стили для страницы Благотворительные счета*/
+
+.page-main TABLE.int TH {
+    width: 230px;
+    padding: 3px 4px 4px 4px;
+    font-size: 120%;
+    line-height: 0.9;
+    font-weight: 400;
+    color: #f0f0f0;
+    text-align: left;
+	border-color: #DDD;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.ext caption {
+    font-size: 125%;
+    color: #fff! important;
+    padding: 4pt 0;
+    text-align: center;
+}
+
+/*Звёздочки в интервью газете*/
+.stars {
+    font-size: 150%;
+    text-align: center;
+    text-indent: 0;
+    margin: 10pt 0 4pt 0;
+}
+
+/*Отступ молитвы на страницы с Посылом на Дух. Единение*/
+P.c2 {
+    margin: 0 0 0 28pt;
+}
+P.c3 {
+    margin: 0 0 6pt 28pt;
+}
+
+/* Текст Катрена */
+P.poem {
+	margin: 12pt 0;
+	text-indent: 0;
+	text-align: left;
+	display: block;
+}
+P.poem1 {
+	margin:12pt 0 12pt 23px;
+	text-indent:-23px;
+}
+P.poem1 SPAN.ind1 {
+	margin:0 0 0 6pt;
+}
+
+/* Подпись Катрена */
+P.noind {
+    margin: 0 0 4pt 0;
+}
+P.noind1 {
+	text-indent:23px;
+	text-align:left;
+}
+P.noind1 SPAN.ind1 {
+	margin: 0 0 0 23px;
+}
+
+/*----------------БЛОК НОВОЕ НА САЙТЕ - непрочитанные сообщения----------*/
+.sm-unread-zindex{
+	z-index: 10000;
+}
+/*Блок с кнопкой Непрочитанное*/
+.block-unread{
+	padding-left: 20px; /*отступ слева, чтобы выровнять по вертикали с надписью Благая весть*/
+}
+
+/*Телефоны - Ширина экрана меньше 768px*/
+@media only screen and (max-width: 768px){ 
+  .block-unread{
+		position: absolute;
+		left: 0px;
+  }
+}
+.btn-unread{
+	color:#99CCFF !important;
+	text-shadow: #032451 0 0 5px; /*тень, чтобы лучше читалась на любом фоне*/	
+	font-size: 20px !important; 
+	font-weight: 400 !important; 
+	line-height: 12px; /*1.8*/
+	padding-left: 10px;
+	margin-top: 10px;
+	border-radius: 0px;	
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-bottom: 4px double #F0F0F0;
+}
+.btn-unread:active{
+	text-decoration: none! important;
+}
+.count-unread{
+	color:#F0F0F0; 
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+ /*фон для выпадающего меню*/
+.m-unread{
+	margin: -4px;
+	height: auto;
+	width: 290px;
+	background-color: rgba(61, 61, 61, 0.96); 
+	font-size: 18px;
+	z-index: 9999; /*поверх всех блоков*/
+	border-top: 4px double #F0F0F0;
+	border-radius: 0px 0px 2px 2px;
+}
+/*класс для ссылки пунктов выпадающего списка*/
+.m-unread>li>a{
+	color: #9CF! important; /*синий*/
+	line-height: 1! important; 
+	text-transform: none; /*обычный шрифт незаглавный*/	
+	white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+	text-overflow: ellipsis; /*Для всех пунктов, кроме кномки "Очистить" обрезаем по длине и делаем многоточие*/
+}
+.m-unread>li>a:hover{
+	color: #FFF! important; 
+	text-decoration: underline! important; 
+	outline: none;
+	background-color: rgba(255, 255, 255, 0)! important; 
+}
+/*Меняем цвет в списке для Катренов*/
+.m-unread .msg-poem{
+	color:#CEF !important;	/*голубые*/
+}
+
+/*прочёркивающая двойная линия*/
+.dropdown-menu .divider{
+	height: 0px;
+	margin: 9px 0;
+	overflow: hidden;
+	border-bottom: 4px double #F0F0F0;
+	background: none;
+}
+
+/*центрирование кнопки "Очистить уведомления"*/
+.clear-unread{
+	display: flex;	
+	justify-content: center;
+	padding-bottom: 10px;
+}
+.clear-unread>a.clear-unread-link{
+	width: auto; 
+	height: 30px; 
+	color: #FFFFFF! important;	
+	background-color: #4a4a4a; 
+	padding: 2px 10px 0px 10px; 
+	margin: 3pt 0 0 0; 
+	border-top: 1px solid #ddd;
+	border-left: 2px solid #ddd; 
+	border-bottom: 2px solid #999; 
+	border-right: 2px solid #999; 
+	font-size: 120%; 
+	line-height: 1! important;
+}
+
+.clear-unread>a.clear-unread-link:hover{
+	color: #FFF! important; 
+	text-decoration: none! important;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0)! important; 
+}
+
+
+.video-embed {
+	max-width: 800px;
+}
+
+/*График в поиске*/
+/*стили меню графика*/
+.highcharts-menu{
+	background: rgba(61, 61, 61, 0.96) none repeat scroll 0% 0% !important; /*цвет фона в раскрывающемся меню*/
+	box-shadow: none !important; 
+	border: 1px solid rgb(153, 153, 153) !important; /*цвет рамки у всего выпадающего меню*/
+	padding: 5px 0px !important;
+	transition: none !important;
+}
+
+/*пункты меню*/
+.highcharts-menu-item{
+	padding: 0.5em 1em;
+	background: transparent none repeat scroll 0% 0%;
+	color: #fff !important; /*цвет текста пунктов выпадающего меню графика*/
+	font-size: 12px !important;
+	transition: none !important;
+}
+/*наведённый пункт меню*/
+.highcharts-menu-item:hover{
+	background: rgba(61, 61, 61, 0.96) none repeat scroll 0% 0% !important;
+	color: #9cf !important; /*цвет текста пунктов выпадающего меню графика*/
+	text-decoration: underline;	
+}
+.highcharts-button-box{
+	background-color: red !important;
+}
+
+
+
+
+
+/* раздел Единомышленники */
+
+#fd_box, #lt_box {
+	padding: 6px 0 4px 0;
+	margin-bottom: 10px;
+	border-left: 2px solid #c0c0c0;
+	border-right: 2px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+TABLE.tform {
+	
+}
+
+TABLE.tform caption {
+	text-align: center;
+	color: #ddd;
+}
+
+TABLE.tform TR {
+	background-color: #222;
+}
+
+TABLE.tform TD {
+	padding: 3px 4px 4px 4px;
+	vertical-align: middle;
+	font-family: MyriadProCondensed,Arial,Helvetica,sans-serif;
+	/*font-size: 120%;*/
+	line-height: 0.9;
+	color: #ddd;
+	border: 1px solid grey;
+}
+
+TABLE.tform INPUT {
+	width: 100%;
+	/*height: 26px;*/
+	padding: 0 0 1px 2px;
+	background-color: #3d3d3d;
+	border-top: 1px solid #808080;
+	border-left: 2px solid #808080;
+	border-bottom: 2px solid #eee;
+	border-right: 2px solid #ccc;
+	font-family: MyriadProCondensed,Arial,Helvetica,sans-serif;
+	font-size: 100%;
+	color: #f0f0f0;
+}
+
+form input.btnform {
+	width: 196px;
+	height: 30px;
+	background-color: #4a4a4a;
+	padding: 0 0 3px 0;
+	margin: 3pt 0 0 0;
+	border-top: 1px solid #ddd;
+	border-left: 2px solid #ddd;
+	border-bottom: 2px solid #999;
+	border-right: 2px solid #999;
+	font-family: MyriadProCondensed,Arial,Helvetica,sans-serif;
+	/*font-size: 120%;*/
+	color: #fff;
+}
+
+/*Поле ввода*/
+.input-blue {
+	padding: 0px 0px 0px 3px;
+	background-color: #136 !important; /*синий цвет фона*/
+	opacity: 0.9;
+	border-width: 1px 2px;
+	border-style: solid;
+	border-color: #789 #9CF #9CF #789;
+	font-size: 18px;
+	color: #E8E8E8;
+}
+/*кнопка*/
+.btn-blue {
+	background-color: #369;
+	color: #E2E2E2;
+	border-width: 1px 2px 2px;
+	border-style: solid;
+	border-color: #9CF #789 #789 #9CF;
+}
+
+.tbotk {
+	background-color: rgba(34,34,34,255);
+	border-color: grey;
+	text-align: center;
+}
+
+	.tbotk > tfoot {
+		background-color: #3d3d3d;
+		text-align: center;
+		color: #ffffff
+	}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+	border-color: grey;
+}
+
+.color-white {
+	color: #ffffff;
+}
+
+/* Формы ввода данных */
+.form-control {
+	background-color: #3d3d3d;
+	color: #f0f0f0;
+	font-size: 100%;
+	font-family: MyriadProCondensed,Arial,Helvetica,sans-serif;
+	padding-left: 6px;
+}
+
+.form-control[disabled] {
+	color: rgb(170, 170, 170);
+	border-color: rgba(118, 118, 118, 0.3);
+	background-color: #3d3d3d;
+}
+
+#lt_box {
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-bottom: 0px;
+}
+
+form #lt_box .row {
+	margin-left: -10px;
+	margin-right: -10px;
+	border-bottom: 1px solid #c0c0c0;
+	margin-top: 6px;
+}
+
+form #lt_box {
+	background-color: #222;
+	color: #ddd;
+}
+
+
+/*дополнения к основным стилям (для мультитенантности)*/
+
+/*Название сайта на картинке "Откровения"*/
+.otk-sitename {
+	position: absolute;
+	top: 8px;
+	left: 34px;
+	font-size: 37px;
+	font-weight: unset;
+	font-family: sans-serif;
+}
+
+/*Название сайта на картинке "людям нового века"*/
+.site-sub-name {
+	position: absolute;
+	top: 44px;
+	left: 36px;
+	font-size: 36px;
+}
+
+@media screen and (max-width: 767px) {
+	.otk-sitename {
+		position: static;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 27px;
+		line-height: 40px;
+	}
+
+	.site-sub-name {
+		position: static;
+		padding-left: 15px;
+		font-size: 27px;
+	}
+
+	.book {
+		position: absolute;
+		padding-left: 205px;
+		top: 10px /*16px*/;
+		line-height: 22px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.otk-sitename {
+		position: static;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 27px;
+		line-height: 40px;
+	}
+
+	.site-sub-name {
+		position: static;
+		padding-left: 15px;
+		font-size: 27px;
+	}
+
+	.book {
+		position: absolute;
+		padding-left: 205px;
+		top: 5px;
+		line-height: 22px;
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.otk-sitename {
+		position: static;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 27px;
+		line-height: 40px;
+	}
+
+	.site-sub-name {
+		position: static;
+		padding-left: 15px;
+		font-size: 27px;
+	}
+
+	.book {
+		position: static;
+		padding-left: 17px;
+		line-height: 22px;
+		font-size: 16px;
+	}
+}
+
+
+/* курсив в текстах (например стихи в Посланиях) */
+SPAN.c2, SPAN.c3, SPAN.c4, SPAN.c5 {
+	text-indent: 0;
+	font-style: italic;
+	color: #fff;
+}
+
+.nonext {
+	display: none;
+}
+
+.btn-link {
+	padding-inline: 0px;
+	border-width: 0px;
+	color: #FFFFFF;
+}
+	.btn-link:hover,
+	.btn-link:active,
+	.btn-link:focus {
+		color: #FFFFFF;
+		text-decoration: none;
+		border-width: 0px;
+	}
+
+
+.cursorPointer {
+	cursor: pointer;
+}
+
+
+
+/* нумерация четверостиший Катренов */
+.poem:before {
+	visibility: var(--visibility, hidden);
+}
+
+/* IE11 */
+*::-ms-backdrop, .poem:before {
+	visibility: hidden;
+}
+
+.poem::before {
+	left: 8px;
+	margin-top: -19px;
+	font-size: medium;
+}
